@@ -1,0 +1,22 @@
+﻿<div>
+    <table class='table table-striped' *ngIf='Numbers && Numbers.length'>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let number of Numbers">
+                <td>{{number.Id}}</td>
+                <td>{{number.Number}}</td>
+                <td>
+                    <button title="Delete" class="btn btn-danger" (click)="deleteNumber(number.Id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button (click)="add()">Dodaj Z Modelem Stala Wartoscs</button>
+    <button (click)="addConstant()">Dodaj Z Wartoscia </button>
+    <button (click)="delete()">Usun</button>
+</div>
